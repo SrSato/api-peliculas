@@ -5,5 +5,8 @@ Lib/
 Scripts/
 pyvenv.cfg
 
+### Flask ###
+include/    
+
 ### mis cosas ###
 
