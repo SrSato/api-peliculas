@@ -1,0 +1,9 @@
+# Ignorando cosas
+
+### virtualenv ###
+Lib/
+Scripts/
+pyvenv.cfg
+
+### mis cosas ###
+
