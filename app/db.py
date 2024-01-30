@@ -1,0 +1,1 @@
+# configuraion de la base de datos

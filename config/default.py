@@ -1,0 +1,1 @@
+# configuración por defecto
