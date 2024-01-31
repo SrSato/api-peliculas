@@ -1,6 +1,11 @@
 # modelos
 from app.db import db, BaseModelMixin
 
+class User(db.Model, BaseModelMixin):
+    id = db.Column(db.Integer, primary_key = True)
+    name = db.Column(db.String, unique = True, nullable = False)
+    pwd = db.Column(db.String, nullable = False)
+
 class Film(db.Model, BaseModelMixin):
     id = db.Column(db.Integer, primary_key = True)
     title = db.Column(db.String)

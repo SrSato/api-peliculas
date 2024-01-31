@@ -1,5 +1,6 @@
 # configuración por defecto
 SECRET_KEY = 'MiClaveSuperSecretaInvencibleChachiGuachi'
+JWT_SECRET_KEY = SECRET_KEY = 'MiClaveSuperSecretaInvencibleChachiGuachi'
 
 PROPAGATE_EXCEPTIONS = True # Con True manejamos las excep a nivel de aplicacion (nosotros mismos)
 

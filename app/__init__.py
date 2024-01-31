@@ -1,6 +1,7 @@
 # El RegEdit de la aplicacion
 from flask import Flask, jsonify
 from flask_restful import Api
+from flask_jwt_extended import JWTManager
 
 from app.common.error_handling import ObjectNotFound, AppErrorBaseClass
 from app.db import db
@@ -15,6 +16,8 @@ def create_app(settings_module):
     db.init_app(app)
     ma.init_app(app)
     migrate.init_app(app, db)
+    jwt = JWTManager(app)
+
 
     Api(app,catch_all_404s=True)
 
@@ -42,6 +45,10 @@ def register_error_handlers(app):
     @app.errorhandler(403)
     def handle_403_error(e):
         return jsonify({'msg':'Forbidden error'}), 403
+    
+    @app.errorhandler(401)
+    def handle_401_error(e):
+        return jsonify({'msg': 'Bad username or password'}),401
     
     @app.errorhandler(AppErrorBaseClass)
     def handle_app_base_error(e):

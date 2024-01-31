@@ -2,6 +2,11 @@
 from marshmallow import fields
 from app.ext import ma
 
+class UserSchema(ma.Schema):
+    id = fields.Integer(dump_only = True)
+    name = fields.String()
+    pwd = fields.String()
+
 class FilmSchema(ma.Schema):
     id = fields.Integer(dump_only = True)
     title = fields.String()
@@ -13,3 +18,4 @@ class FilmSchema(ma.Schema):
 class ActorSchema(ma.Schema):
     id = fields.Integer(dump_only = True)
     name = fields.String()
+
