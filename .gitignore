@@ -6,7 +6,19 @@ Scripts/
 pyvenv.cfg
 
 ### Flask ###
-include/    
+include/  
+var/  
+
+### Python ###
+__pycache__/
+app/__pycache__/
+common/__pycache__
+films/__pycache__
+films/api_v1_0/__pycache__
+config/__pycache__
+
+### db ###
+migrations
 
 ### mis cosas ###
 
